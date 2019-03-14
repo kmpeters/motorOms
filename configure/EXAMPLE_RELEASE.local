@@ -1,0 +1,2 @@
+MOTOR=/APSshare/epics/synApps_6_0/support/motor-R6-10-1
+-include $(MOTOR)/configure/RELEASE
