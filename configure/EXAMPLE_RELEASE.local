@@ -1,2 +1,4 @@
-MOTOR=/APSshare/epics/synApps_6_0/support/motor-R6-10-1
+MOTOR=/home/oxygen/KPETERSN/epics/motor-split/motor-kmp
 -include $(MOTOR)/configure/RELEASE
+# path to motorOms is needed to build the IOC inside motorOms, but outside motor
+MOTOR_OMS=/home/oxygen/KPETERSN/epics/motor-split/OMS/motorOms4

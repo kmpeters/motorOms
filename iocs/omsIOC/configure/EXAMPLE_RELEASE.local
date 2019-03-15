@@ -1,0 +1,6 @@
+# Use the following lines if motorOms was built inside motor
+MOTOR=/APSshare/epics/synApps_6_0/support/motor-R6-10-1
+-include $(MOTOR)/configure/RELEASE
+# Use the following lines if motorOms was built outside motor
+#!MOTOR_OMS=/home/oxygen/KPETERSN/epics/motor-split/OMS/motorOms4
+#!-include $(MOTOR_OMS)/configure/RELEASE.local
