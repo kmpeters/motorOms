@@ -5,6 +5,9 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS AFTER THIS LINE
 #=============================
 
+# The following are used for debugging messages.
+#!USR_CXXFLAGS += -DDEBUG
+
 #=============================
 # Build the IOC application
 
@@ -16,10 +19,21 @@ DBD += oms.dbd
 oms_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#oms_DBD += xxx.dbd
+#ifdef ASYN
+oms_DBD += asyn.dbd
+#endif
+oms_DBD += motorSupport.dbd
+oms_DBD += devOms.dbd
 
 # Add all the support libraries needed by this IOC
-#oms_LIBS += xxx
+oms_LIBS += oms
+oms_LIBS += motor
+#ifdef ASYN
+oms_LIBS += asyn
+#endif
+#ifdef SNCSEQ
+oms_LIBS += seq pv
+#endif
 
 # oms_registerRecordDeviceDriver.cpp derives from oms.dbd
 oms_SRCS += oms_registerRecordDeviceDriver.cpp
