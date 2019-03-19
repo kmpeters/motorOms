@@ -3,5 +3,4 @@
 
 #
 CHECK_RELEASE = WARN
-#
-#BUILD_IOCS = YES
+
