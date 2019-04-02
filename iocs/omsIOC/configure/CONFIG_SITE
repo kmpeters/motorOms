@@ -35,6 +35,8 @@ CHECK_RELEASE = YES
 #HOST_OPT = NO
 #CROSS_OPT = NO
 
+# Include motor's CONFIG_SITE.local when building inside motor
+-include $(TOP)/../../../../configure/CONFIG_SITE.local
 # Include motorOms's CONFIG_SITE.local when building inside motorOms
 -include $(TOP)/../../configure/CONFIG_SITE.local
 # Use omsIOC's CONFIG_SITE.local
